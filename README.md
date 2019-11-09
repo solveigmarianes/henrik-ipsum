@@ -1,5 +1,4 @@
-# Henrik Ipsum
-*En mer herskapelig Lorem Ipsum-generator*
+![Henrik Ipsum Banner](https://repository-images.githubusercontent.com/220678174/a80f5480-0352-11ea-89d3-3f63e395fd8b)
 
 Tilgjengelig på [henrik-ipsum.com]
 
