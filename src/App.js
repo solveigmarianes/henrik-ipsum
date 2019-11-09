@@ -5,7 +5,7 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 
 function App() {
-    const [antall, setAntall] = useState(4)
+    const [antall, setAntall] = useState(2)
     const decrease = () => setAntall(antall - 1)
     const increase = () => setAntall(antall + 1)
 

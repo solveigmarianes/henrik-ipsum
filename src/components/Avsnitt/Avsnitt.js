@@ -3,7 +3,8 @@ import useAvsnitt from '../../tekst'
 import './Avsnitt.scss'
 
 const Avsnitt = ({ antall }) => {
-    const [tooltip, setTooltip] = useState('Klik for at kopiere')
+    const initialState = 'Tryk for at fæste til udklipstavlen'
+    const [tooltip, setTooltip] = useState(initialState)
     const avsnitt = useAvsnitt(antall)
     const ref = useRef(null)
 
@@ -12,6 +13,7 @@ const Avsnitt = ({ antall }) => {
         field.style.height = 'auto'
         field.setAttribute('style', 'height:' + field.scrollHeight + 'px;')
         field.style.height = field.scrollHeight + 'px;'
+        setTooltip(initialState)
     }, [antall])
 
     const copyToClipboard = () => {
@@ -20,7 +22,6 @@ const Avsnitt = ({ antall }) => {
         setTooltip('Fæstet til udklipstavlen!')
     }
 
-    if (antall < 1) return null
     return (
         <div className="avsnitt">
             <div id="tooltip">
@@ -32,6 +33,7 @@ const Avsnitt = ({ antall }) => {
             <textarea
                 ref={ref}
                 id="tekst"
+                spellCheck={false}
                 onClick={copyToClipboard}
                 onChange={e => e.preventDefault()}
                 value={avsnitt.reduce((total, par) => {
