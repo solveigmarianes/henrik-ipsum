@@ -2,6 +2,9 @@
   width: 100%;
   position: relative;
 
+  border: 1px solid gray;
+  padding: 0 1rem;
+
   &:hover, &:focus {
     #tooltip {
       visibility: visible;
@@ -31,18 +34,11 @@
     position: absolute;
     background-color: black;
     bottom: -0.5rem;
-    z-index: -1;
     left: calc((100% - .5em) * 0.5)
   }
 }
 
 #tekst {
-  font-family: 'Old Standard TT', serif;
-  font-size: 1.2rem;
-  background-color: initial;
-  padding: 1rem;
-  width: 100%;
-  height: auto;
-  resize: none;
-  overflow-y: hidden;
+  position: absolute;
+  opacity: 0;
 }

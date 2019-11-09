@@ -4,4 +4,13 @@ footer {
   padding: 1rem;
   width: 100%;
   bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+
+  @media only screen and (max-width: 500px) {
+    flex-direction: column;
+    span:first-child {
+      margin-bottom: 1rem;
+    }
+  }
 }

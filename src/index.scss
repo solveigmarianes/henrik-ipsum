@@ -1,11 +1,31 @@
+$white: antiquewhite;
+$brown: #605b53;
+
 body {
-  background-color: antiquewhite;
+  background-color: $white;
   color: black;
   margin: 0;
   font-family: 'Old Standard TT', serif;
   font-size: 1.2rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(0deg, $white, $brown);
+    border-radius: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 0;
+  }
 }
 
 * {
@@ -80,6 +100,7 @@ main {
       &:focus {
         outline: none;
       }
+
       div {
         margin-top: -1.5rem;
       }
