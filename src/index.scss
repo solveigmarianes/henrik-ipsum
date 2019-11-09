@@ -1,0 +1,118 @@
+body {
+  background-color: antiquewhite;
+  color: black;
+  margin: 0;
+  font-family: 'Old Standard TT', serif;
+  font-size: 1.2rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-image: url('static/henrik-ibsen-vignette.jpg');
+  width: 100%;
+  background-size: cover;
+  background-position-y: 12%;
+  padding: 1rem;
+
+  .header-content {
+    opacity: 100%;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-family: 'Miss Fajardose', cursive;
+    font-weight: 400;
+    font-size: 14vw;
+    margin-block-start: .5em;
+    margin-block-end: 0;
+  }
+
+  .tagline {
+    font-family: 'Cormorant Upright', cursive;
+    font-size: 3vw;
+    padding-left: 0.5em;
+    margin-block-start: 0;
+  }
+}
+
+/*
+font-family: 'Old Standard TT', serif;
+font-family: 'Cormorant Upright', serif;
+font-family: 'Miss Fajardose', cursive;
+font-family: 'Forum', cursive;
+font-family: 'Dynalight', cursive;
+*/
+
+main {
+  padding: 1rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+
+  .teller {
+    display: inline-flex;
+    align-items: center;
+
+    .antall {
+      font-family: "Miss Fajardose", cursive;
+      font-size: 4rem;
+      padding: 1rem;
+    }
+
+    button {
+      font-family: "Miss Fajardose", cursive;
+      font-size: 5rem;
+      padding: 0 1rem;
+      line-height: 1rem;
+      background-color: transparent;
+      border: none;
+      &:focus {
+        outline: none;
+      }
+      div {
+        margin-top: -1.5rem;
+      }
+    }
+  }
+
+  .avsnitt {
+    width: 100%;
+  }
+
+  #tekst {
+    font-family: 'Old Standard TT', serif;
+    font-size: 1.2rem;
+    background-color: initial;
+    padding: 1rem;
+    text-align: initial;
+    border: 1px solid gray;
+    -webkit-appearance: none;
+    width: 100%;
+    height: auto;
+    display: flex;
+    overflow-wrap: normal;
+    white-space: normal;
+    overflow-y:hidden;
+    resize: none;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  bottom: 0;
+}
+
+
