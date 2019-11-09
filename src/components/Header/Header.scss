@@ -7,7 +7,6 @@ header {
 
   .header-content {
     opacity: 100%;
-    padding: 1rem;
     color: antiquewhite;
     text-shadow: 1px 1px 3px black;
   }
@@ -18,6 +17,16 @@ header {
     font-size: 14vw;
     margin-block-start: .5em;
     margin-block-end: 0;
+
+    @media only screen and (max-width: 500px) {
+      font-size: 24vw;
+      margin-block-start: 1.6em;
+    }
+
+    @media only screen and (min-width: 1000px) {
+      font-size: 12vw;
+      margin-block-start: 1.6em;
+    }
   }
 
   .tagline {
@@ -25,5 +34,9 @@ header {
     font-size: 3vw;
     padding-left: 0.5em;
     margin-block-start: 0;
+
+    @media only screen and (max-width: 500px) {
+      font-size: 8vw;
+    }
   }
 }

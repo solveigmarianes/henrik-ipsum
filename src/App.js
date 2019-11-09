@@ -11,20 +11,24 @@ function App() {
 
     return (
         <>
-            <Header/>
-            <main>
-                <div className="teller">
-                    <h3>Vælg dit ønskede antall afsnit:</h3>
-                    <button onClick={decrease} disabled={antall === 1}>
-                        <div>‹</div>
-                    </button>
-                    <div className="antall">{antall}</div>
-                    <button onClick={increase} disabled={antall === tekst.length}>
-                        <div>›</div>
-                    </button>
-                </div>
-                <Avsnitt antall={antall}/>
-            </main>
+            <div className="App">
+                <Header/>
+                <main>
+                    <div className="teller">
+                        <label>Vælg dit ønskede antall afsnit:</label>
+                        <div className="tellegruppe">
+                            <button onClick={decrease} disabled={antall === 1}>
+                                <div>‹</div>
+                            </button>
+                            <div className="antall">{antall}</div>
+                            <button onClick={increase} disabled={antall === tekst.length}>
+                                <div>›</div>
+                            </button>
+                        </div>
+                    </div>
+                    <Avsnitt antall={antall}/>
+                </main>
+            </div>
             <Footer/>
         </>
     )

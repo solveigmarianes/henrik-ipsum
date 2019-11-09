@@ -2,8 +2,10 @@
   width: 100%;
   position: relative;
 
-  &:hover #tooltip {
-    visibility: visible;
+  &:hover, &:focus {
+    #tooltip {
+      visibility: visible;
+    }
   }
 }
 
@@ -39,16 +41,8 @@
   font-size: 1.2rem;
   background-color: initial;
   padding: 1rem;
-  text-align: initial;
-  border: 1px solid gray;
-  -webkit-appearance: none;
   width: 100%;
   height: auto;
-  display: flex;
-  overflow-wrap: normal;
-  white-space: normal;
-  overflow-y:hidden;
   resize: none;
-
-
+  overflow-y: hidden;
 }
