@@ -1,7 +1,9 @@
-import React, { useRef, useEffect } from 'react'
-import useAvsnitt from '../tekst'
+import React, { useRef, useEffect, useState } from 'react'
+import useAvsnitt from '../../tekst'
+import './Avsnitt.scss'
 
 const Avsnitt = ({ antall }) => {
+    const [tooltip, setTooltip] = useState('Klik for at kopiere')
     const avsnitt = useAvsnitt(antall)
     const ref = useRef(null)
 
@@ -15,12 +17,18 @@ const Avsnitt = ({ antall }) => {
     const copyToClipboard = () => {
         ref.current.select()
         document.execCommand('copy')
+        setTooltip('Fæstet til udklipstavlen!')
     }
 
     if (antall < 1) return null
     return (
         <div className="avsnitt">
-            <div className="tooltip">Tooltip</div>
+            <div id="tooltip">
+                <div className="tooltip-content">
+                    <span>{tooltip}</span>
+                    <div className="arrow"/>
+                </div>
+            </div>
             <textarea
                 ref={ref}
                 id="tekst"

@@ -1,0 +1,54 @@
+.avsnitt {
+  width: 100%;
+  position: relative;
+
+  &:hover #tooltip {
+    visibility: visible;
+  }
+}
+
+#tooltip {
+  visibility: hidden;
+  position: absolute;
+  top: -2.2rem;
+  right: 0;
+  padding: .25rem .5rem;
+  font-size: 1rem;
+  background-color: black;
+  color: antiquewhite;
+  border-radius: 6px;
+
+  .tooltip-content {
+    position: relative;
+  }
+
+  .arrow {
+    transform: rotate(45deg);
+    width: .5rem;
+    height: .5rem;
+    position: absolute;
+    background-color: black;
+    bottom: -0.5rem;
+    z-index: -1;
+    left: calc((100% - .5em) * 0.5)
+  }
+}
+
+#tekst {
+  font-family: 'Old Standard TT', serif;
+  font-size: 1.2rem;
+  background-color: initial;
+  padding: 1rem;
+  text-align: initial;
+  border: 1px solid gray;
+  -webkit-appearance: none;
+  width: 100%;
+  height: auto;
+  display: flex;
+  overflow-wrap: normal;
+  white-space: normal;
+  overflow-y:hidden;
+  resize: none;
+
+
+}

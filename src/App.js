@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import Avsnitt from './components/Avsnitt'
+import Avsnitt from './components/Avsnitt/Avsnitt'
 import { tekst } from './tekst'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
 function App() {
     const [antall, setAntall] = useState(4)
@@ -9,12 +11,7 @@ function App() {
 
     return (
         <>
-            <header>
-                <div className="header-content">
-                    <h1>Henrik Ipsum</h1>
-                    <p className="tagline">- en mer herskabelig Lorem Ipsum-generator</p>
-                </div>
-            </header>
+            <Header/>
             <main>
                 <div className="teller">
                     <h3>Vælg dit ønskede antall afsnit:</h3>
@@ -28,9 +25,7 @@ function App() {
                 </div>
                 <Avsnitt antall={antall}/>
             </main>
-            <footer>
-                Copyright (c) 2019 | plommesaft
-            </footer>
+            <Footer/>
         </>
     )
 }
